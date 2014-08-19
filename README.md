@@ -29,6 +29,7 @@ This is a JavaScript based workaround for browsers which don’t support the CSS
 - Check for better crossbrowser support
 - Better performance (it is still slow to render)
 - Gruntify
+- Get rid of CSS file.
 
 ## Credit
 
