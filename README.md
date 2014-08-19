@@ -2,19 +2,38 @@
 
 This is a JavaScript based workaround for browsers which don’t support the CSS [`background-blend-mode`](http://css-tricks.com/basics-css-blend-modes/) property. 
 
+####Browser Support: 
+
+- CSS background-blend-mode: many browsers but IE11- and some mobile [Can I Use...](http://caniuse.com/#feat=css-backgroundblendmode).
+- Canvas blend modes: any browser but IE11- [Can I Use...](http://caniuse.com/#feat=canvas-blending).
 
 ## Usage
 
-Add the `blend-mode.js` file to your HTML file, declare your CSS background properties as you normally would using a `blend-multiply` class name. 
+1. Add the `js-background-blend-mode.js` file to your HTML
+2. Define an element using `data-blend` attribute and one of those values:
+
+	**normal | multiply | screen | overlay | darken | lighten | color-dodge | color-burn | hard-light | soft-light | difference | exclusion | hue | saturation | color | luminosity**
+
+3. Add an image to blend using the `data-blend-image` attribute.
+4. Add a color to blend using `data-blend-color` attribute.
+5. Add a little CSS and the fallback if the browser support CSS `background-blend-mode` (js-background-blend-mode.css file).
+
+####Example:
+
+	<div class="blend" data-blend="normal" data-blend-image="demo.jpg" data-blend-color="rgba(255, 0, 0, 0.75)"></div>
 
 
-## What's missing?
+## TODO
 
-As of now only the Multiply blend mode is hardcoded but it's enough to get you started. It would be great to be able to apply whatever `background-blend-mode` value you have in your CSS file, but currently reading unsupported CSS property values seems to be impossible. 
-
-I've only tested it on Safari iOS 7, should work on Mavericks as well.
+- Polish code
+- Check for better crossbrowser support
+- Better performance (it is still slow to render)
+- Gruntify
 
 
 ## License
 
-This software is released under the **Anyone But Redbanc Software License** (*ABRSL*). [Learn more](LICENSE.md) about the ABRSL.
+
+Original License: [ABRSL](https://github.com/idevsoftware/js-background-blend-mode/blob/master/LICENSE.md).
+
+Forked License: [MIT](https://github.com/juanbrujo/js-background-blend-mode/blob/master/LICENSE)
