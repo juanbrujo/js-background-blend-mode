@@ -30,6 +30,10 @@ This is a JavaScript based workaround for browsers which don’t support the CSS
 - Better performance (it is still slow to render)
 - Gruntify
 
+## Credit
+
+- Forked from: [https://github.com/idevsoftware/](https://github.com/idevsoftware/js-background-blend-mode/)
+- Adobe Blend Modes and Compositing: [http://html.adobe.com/webplatform/](http://html.adobe.com/webplatform/graphics/blendmodes/)
 
 ## License
 
