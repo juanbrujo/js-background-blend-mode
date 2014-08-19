@@ -20,7 +20,7 @@ This is a JavaScript based workaround for browsers which don’t support the CSS
 
 ####Example:
 
-	<div class="blend" data-blend="normal" data-blend-image="demo.jpg" data-blend-color="rgba(255, 0, 0, 0.75)"></div>
+	<div class="blend" data-blend="overlay" data-blend-image="demo.jpg" data-blend-color="rgba(255, 0, 0, 0.5)"></div>
 
 
 ## TODO
