@@ -1,7 +1,7 @@
 /* JUST FOR THE DEMO */
 @import url(http://fonts.googleapis.com/css?family=Cousine:400,700);
-html {height: 100%;}
-body {height: 100%;background-color: #fff;font-family: 'Cousine', monotype;}
+html,body {height: 100%;}
+body {background-color: #fff; font-family: 'Cousine', monotype;}
 
 .blend {
   display: inline-block;
@@ -9,8 +9,8 @@ body {height: 100%;background-color: #fff;font-family: 'Cousine', monotype;}
   margin: 30px;
   width: 30%;
   height: 200px;
-}
-  .blend:before {
+
+  &:before {
     content: attr(data-blend);
     position: absolute;
     bottom: 0;
@@ -18,10 +18,12 @@ body {height: 100%;background-color: #fff;font-family: 'Cousine', monotype;}
     background-color: #fff;
     padding: 2px 4px;
   }
+}
+
 .blend[data-blend] {
   background-size: cover;
   background-position: center center;
-  background-image: url('demo.jpg');
+  background-image: url('../demo.jpg');
   background-color: rgba(255, 0, 0, 0.75);
 }
 /* END JUST FOR THE DEMO */

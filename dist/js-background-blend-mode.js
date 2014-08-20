@@ -1,34 +1,29 @@
 /*
- *  js-background-blend-mode 
- *  Polyfill using canvas for browsers tha not support background-blend-mode
- *
- *  check: http://caniuse.com/#feat=canvas-blending
+ *  JavaScript Background Blend Mode - v0.1
+ *  A JavaScript based polyfill for browsers that don’t support CSS background-blend-mode
  *
  *  https://github.com/juanbrujo/js-background-blend-mode
- *
- *  forked from: https://github.com/idevsoftware/js-background-blend-mode
  *
  *  By: Jorge Epuñan |  @csslab
  *  License: MIT
  */
-
 ;(function(window) {
 
   var __f = function(obj) {
-    if (typeof window[obj] === 'undefined') {
-      if (typeof console !== 'undefined') {
-        console.log('Warning: canvas context not supported (' + obj + ' needed)');
+    if (typeof window[obj] === "undefined") {
+      if (typeof console !== "undefined") {
+        console.log("Warning: canvas context not supported (" + obj + " needed)");
       }
       return false;
     }
     return true;
   };
 
-  if (!__f('HTMLCanvasElement')) { return; }
+  if (!__f("HTMLCanvasElement")) { return; }
 
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener("DOMContentLoaded", function() {
     var supportsBackgroundBlendMode = window.getComputedStyle(document.body).backgroundBlendMode;
-    if(typeof supportsBackgroundBlendMode == 'undefined') {  
+    if(typeof supportsBackgroundBlendMode === "undefined") {  
 
       // TODO: check for Canvas composite support
 
@@ -37,44 +32,43 @@
   }, false);
 
   var createBlendedBackgrounds = function() {
-    var els = document.querySelectorAll('[data-blend]');
+    var els = document.querySelectorAll("[data-blend]");
     for(var i = 0; i < els.length; i++) {
       var el = els[i],
-          type = el.getAttribute('data-blend'),
-          image = el.getAttribute('data-blend-image'),
-          color = el.getAttribute('data-blend-color');
+          type = el.getAttribute("data-blend"),
+          image = el.getAttribute("data-blend-image"),
+          color = el.getAttribute("data-blend-color");
       processElement(el,type,image,color);
     }
-  }
+  };
 
   var processElement = function(el,type,image,color) {
-    var style = window.getComputedStyle(el),
-        backgroundImageURL = image,
+    var backgroundImageURL = image,
         backgroundColor = color;
 
     createBlendedBackgroundImageFromURLAndColor(backgroundImageURL, backgroundColor, type, function(imgData) {
-      el.style.backgroundImage = 'url(' + imgData + ')';
+      el.style.backgroundImage = "url(" + imgData + ")";
     });
-  }
+  };
 
   var createBlendedBackgroundImageFromURLAndColor = function(url, color, type, callback) {
 
     // TODO: add alpha channel
 
-    var img = document.createElement('img');
+    var img = document.createElement("img");
     img.src = url;
     img.onload = function() {
-      var canvas = document.createElement('canvas');
+      var canvas = document.createElement("canvas");
       canvas.width = this.naturalWidth;
       canvas.height = this.naturalHeight;
-      var context = canvas.getContext('2d');
-      context.globalCompositeOperation = type
+      var context = canvas.getContext("2d");
+      context.globalCompositeOperation = type;
       context.drawImage(this, 0, 0);
       context.fillStyle = color;
       context.fillRect(0, 0, canvas.width, canvas.height);
-      var data = canvas.toDataURL('image/jpeg');
+      var data = canvas.toDataURL("image/jpeg");
       callback(data);
     };
-  }
+  };
 
 })(window);

@@ -1,0 +1,28 @@
+{
+	"name": "js-background-blend-mode",
+	"title": "JavaScript Background Blend Mode",
+	"homepage": "https://github.com/juanbrujo/js-background-blend-mode",
+	"description": "A JavaScript based polyfill for browsers that don’t support CSS background-blend-mode",
+	"keywords": [
+		"Adobe",
+		"Blend Mode",
+		"plugins",
+		"image",
+		"effect"
+	],
+	"version": "0.1",
+	"author": {
+		"name": "Jorge Epuñan",
+		"url": "https://github.com/juanbrujo",
+		"twitter": "@csslab"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://mit-license.org/"
+		}
+	],
+	"bugs": "https://github.com/juanbrujo/js-background-blend-mode/issues",
+	"docs": "https://github.com/juanbrujos/js-background-blend-mode#readme",
+	"download": "https://github.com/juanbrujo/js-background-blend-mode/archive/master.zip"
+}
