@@ -7,6 +7,11 @@ A JavaScript based _polyfill_ for browsers that don’t support CSS [`background
 - CSS background-blend-mode: many browsers but IE11- and some mobile [Can I Use...](http://caniuse.com/#feat=css-backgroundblendmode).
 - Canvas blend modes: any browser but IE11- [Can I Use...](http://caniuse.com/#feat=canvas-blending).
 
+####Demo: 
+[Codepen](http://codepen.io/juanbrujo/full/DnghH/)
+
+![image](https://dl.dropboxusercontent.com/u/3522/js-background-blend-mode.png)
+
 ## Usage
 
 1. Add the `js-background-blend-mode.js` file to your HTML
@@ -28,8 +33,8 @@ A JavaScript based _polyfill_ for browsers that don’t support CSS [`background
 - Polish code
 - Check for better crossbrowser support
 - Better performance (it is still slow to render)
-- Gruntify **DONE**
-- Get rid of CSS file.
+- ~~Gruntify~~
+- Get rid of CSS file
 
 ## Credit
 
