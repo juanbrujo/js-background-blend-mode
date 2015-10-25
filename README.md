@@ -35,6 +35,8 @@ A JavaScript based _polyfill_ for browsers that don’t support CSS [`background
 - Better performance (it is still slow to render)
 - ~~Gruntify~~
 - Get rid of CSS file
+- Bowerify
+- NPM modulify
 
 ## Credit
 
