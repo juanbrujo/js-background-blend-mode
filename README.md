@@ -2,15 +2,15 @@
 
 A JavaScript based _polyfill_ for browsers that don’t support CSS [`background-blend-mode`](http://html.adobe.com/webplatform/graphics/blendmodes/) property.
 
-####Browser Support: 
+#### Browser Support: 
 
 - CSS background-blend-mode: many browsers but IE11- and some mobile [Can I Use...](http://caniuse.com/#feat=css-backgroundblendmode).
 - Canvas blend modes: any browser but IE11- [Can I Use...](http://caniuse.com/#feat=canvas-blending).
 
-####Demo: 
+#### Demo: 
 [Codepen](http://codepen.io/juanbrujo/full/DnghH/)
 
-![image](https://dl.dropboxusercontent.com/u/3522/js-background-blend-mode.png)
+![js-background-blend-mode](https://i.imgur.com/KSPNis4.png)
 
 ## Usage
 
@@ -23,10 +23,11 @@ A JavaScript based _polyfill_ for browsers that don’t support CSS [`background
 4. Add a color to blend using `data-blend-color` attribute.
 5. Add a little CSS and the fallback if the browser support CSS `background-blend-mode` (js-background-blend-mode.css file).
 
-####Example:
+#### Example:
 
-	<div class="blend" data-blend="overlay" data-blend-image="demo.jpg" data-blend-color="rgba(255, 0, 0, 0.5)"></div>
-
+```html
+<div class="blend" data-blend="overlay" data-blend-image="demo.jpg" data-blend-color="rgba(255, 0, 0, 0.5)"></div>
+```
 
 ## TODO
 
@@ -35,8 +36,8 @@ A JavaScript based _polyfill_ for browsers that don’t support CSS [`background
 - Better performance (it is still slow to render)
 - ~~Gruntify~~
 - Get rid of CSS file
-- Bowerify
-- NPM modulify
+- ~~Bowerify~~
+- NPM module
 
 ## Credit
 
