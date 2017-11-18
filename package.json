@@ -1,5 +1,19 @@
 {
-  "private": true,
+  "name": "js-backgound-blend-mode",
+  "version": "0.0.1",
+  "homepage": "https://github.com/juanbrujo/js-background-blend-mode",
+  "authors": [
+    "Jorge Epuñan <juanbrujo@gmail.com>"
+  ],
+  "description": "A JavaScript based polyfill for browsers that don’t support CSS background-blend-mode property.",
+  "main": "index.js",
+  "keywords": [
+    "javascript",
+    "blend-mode",
+    "css"
+    "polyfill"
+  ],
+  "license": "MIT",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-cli": "~0.1.13",

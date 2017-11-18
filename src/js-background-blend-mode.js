@@ -15,9 +15,6 @@
   document.addEventListener("DOMContentLoaded", function() {
     var supportsBackgroundBlendMode = window.getComputedStyle(document.body).backgroundBlendMode;
     if(typeof supportsBackgroundBlendMode === "undefined") {  
-
-      // TODO: check for Canvas composite support
-
       createBlendedBackgrounds();
     }
   }, false);
@@ -43,9 +40,6 @@
   };
 
   var createBlendedBackgroundImageFromURLAndColor = function(url, color, type, callback) {
-
-    // TODO: add alpha channel
-
     var img = document.createElement("img");
     img.src = url;
     img.onload = function() {
