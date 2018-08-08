@@ -2,6 +2,8 @@
 
 A JavaScript based _polyfill_ for browsers that don’t support CSS [`background-blend-mode`](http://html.adobe.com/webplatform/graphics/blendmodes/) property.
 
+[![npm version](https://badge.fury.io/js/js-backgound-blend-mode.svg)](https://www.npmjs.com/package/js-backgound-blend-mode)
+
 #### Browser Support: 
 
 - CSS background-blend-mode: many browsers but IE11- and some mobile [Can I Use...](http://caniuse.com/#feat=css-backgroundblendmode).
@@ -21,7 +23,7 @@ A JavaScript based _polyfill_ for browsers that don’t support CSS [`background
 
 3. Add an image to blend using the `data-blend-image` attribute.
 4. Add a color to blend using `data-blend-color` attribute.
-5. Add a little CSS and the fallback if the browser support CSS `background-blend-mode` (js-background-blend-mode.css file).
+5. Add a little CSS for fallback if the browser support CSS `background-blend-mode` (js-background-blend-mode.css file).
 
 #### Example:
 
@@ -37,7 +39,7 @@ A JavaScript based _polyfill_ for browsers that don’t support CSS [`background
 - ~~Gruntify~~
 - Get rid of CSS file
 - ~~Bowerify~~
-- NPM module
+- ~~NPM module~~
 
 ## Credit
 
